@@ -1,4 +1,4 @@
-const Show = require('./models/pet.js');
+const Cartoon = require('./models/cartoons.js');
 
 const dotenv = require('dotenv');
 dotenv.config();
@@ -18,8 +18,8 @@ app.use(express.json());
 
 // CREATE - POST - /cartoons
 app.post('/cartoons', async (req, res) => {
-  //const createdCartoon = await Cartoon.create(req.body);
-  //res.json(createdCartoon)
+  const createdCartoon = await Cartoon.create(req.body);
+  res.json(createdCartoon)
 
 });
 
